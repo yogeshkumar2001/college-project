@@ -1,0 +1,5 @@
+.details-exp{
+    display: flex;
+    overflow-x: hidden;
+    margin-bottom: 5%;
+}

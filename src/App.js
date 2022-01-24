@@ -18,9 +18,11 @@ import Profile from "./Components/Profile/Profile";
 import SignUp from "./Components/SignUp/Signup";
 import Contact from "./Components/Contact/Contact";
 import Education from "./Components/Education/Education";
-import Finalize from "./Components/Finalize/Finalize";
+// import Finalize from "./Components/Finalize/Finalize";
 import MyResume from "./Components/MyResumes/MyResume";
-
+import Skills from "./Components/Skills/Skills";
+import Experience from "./Components/Experience/Experience";
+import Final from "./Components/Finalize/Final.jsx";
 class App extends Component {
   state = {
     isAuth: false,
@@ -42,8 +44,7 @@ class App extends Component {
 //       .then((obj) => {
 //         console.log("Signed Out !!!!");
 //         this.setState({
-//           isAuth: false,
-//           user: null,
+//           isAuth: false,//           user: null,
 //         });
 //         // localStorage.setItem("isAuth", false);
 //       });
@@ -62,7 +63,7 @@ login = (id, pw) => {
           isAuth: true,
         });
         // localStorage.setItem("isAuth", true);
-      });
+      })
   };
   componentDidMount() {
     firebaseApp.auth().onAuthStateChanged(async (user) => {
@@ -126,6 +127,10 @@ login = (id, pw) => {
             <Route path="/templates" exact ><Templates isAuth={this.state.isAuth} uid={this.state.user} setResumeId={this.setResumeId}></Templates></Route>
             <Route path="/contact" exact ><Contact isAuth={this.state.isAuth} uid={this.state.user} selectedResumeId={this.state.selectedResumeId}></Contact></Route>
             <Route path="/edu" exact ><Education isAuth={this.state.isAuth} uid={this.state.user} selectedResumeId={this.state.selectedResumeId}></Education></Route>
+            <Route path="/exp" exact ><Experience isAuth={this.state.isAuth} login={this.login}></Experience></Route>
+            <Route path="/skills" exact ><Skills isAuth={this.state.isAuth} login={this.login}></Skills></Route>
+            <Route path="/about" exact ><About isAuth={this.state.isAuth} login={this.login}></About></Route>
+            <Route path="/final" exact ><Final isAuth={this.state.isAuth} login={this.login}></Final></Route>
             <Route path="/signin" exact ><SignIn isAuth={this.state.isAuth} login={this.login}></SignIn></Route>
           </Switch>
         </div>

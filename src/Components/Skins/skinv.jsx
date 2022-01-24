@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./MySkin.css";
+import "./skinv.css";
 
 class MySkin extends Component {
 
@@ -94,7 +94,7 @@ class MySkin extends Component {
 
 
         return ( 
-            <div className="resume-skin">
+            <div className="resume-skin" ref={this.props.refProp}>
                 <div className="resume-left-strap">
                     {
                         skills.length

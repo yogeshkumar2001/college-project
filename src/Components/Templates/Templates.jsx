@@ -17,7 +17,7 @@ class Templates extends Component {
       { id: "skin7", path: "./images/skin7.svg" },
       { id: "skin8", path: "./images/skin8.svg" },
     ],
-    isAuth :null
+    isAuth :null,
   };
 
   handleChooseTemplate = async (e) => {
@@ -26,6 +26,7 @@ class Templates extends Component {
     console.log(e.target.attributes[2].nodeValue)
     console.log(skinId);
     localStorage.setItem("skinPath" ,JSON.stringify(e.target.attributes[2].nodeValue) );
+    localStorage.setItem("skinId" ,JSON.stringify(skinId) );
     // get skinID
     let selectResumeId;
      selectResumeId = localStorage.getItem("selectedResumeId");

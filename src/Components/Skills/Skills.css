@@ -1,0 +1,27 @@
+.skill-form-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35%;
+    margin-top: 3%;
+}
+.skill-form{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.skill-details{
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skill {
+    width: 90%;
+  }
+  

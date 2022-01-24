@@ -1,43 +1,40 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class Education extends React.Component {
+import "./Experience.css";
+class Experience extends React.Component {
   state = {
-    educationDetails: {
-      schoolName: "",
-      schoolLocation: "",
-      collegeName: "",
-      collegeLocation: "",
-      degree: "",
-      field: "",
-      schoolCpga: "",
-      collegeCpga: "",
-      gStartDate: "",
-      gEndDate: ""
+    experienceDetails: {
+      jobTitle: "",
+      position: "",
+      city: "",
+      state: "",
+      companyName: "",
+      aboutCompany: "",
+      startDate: "",
+      endDate: "",
     },
-    skinPath: ""
-  }
+    skinPath: "",
+  };
   onChangeHandler = (e) => {
     // console.log(contactCodes);
     let id = e.target.id;
     let value = e.target.value;
-    let oldeducationDetails = this.state.educationDetails;
+    let oldexperienceDetails = this.state.experienceDetails;
     this.setState({
-      educationDetails: {
-        ...oldeducationDetails,
+      experienceDetails: {
+        ...oldexperienceDetails,
         [id]: value
       }
     });
   };
-  backButtonHandler = () => {
-    console.log("back button clicked !!");
-  };
+
   nextButtonHandler = () => {
     console.log("next button clicked !!");
-    
-    let oldeducationDetails = this.state.educationDetails ;
+
+    let oldExpDetails = this.state.experienceDetails;
     localStorage.setItem(
-      "educationDetails",
-      JSON.stringify(oldeducationDetails)
+      "experienceDetails",
+      JSON.stringify(oldExpDetails)
     );
   };
   componentDidMount() {
@@ -46,44 +43,36 @@ class Education extends React.Component {
     this.setState({
       skinPath: skinPath,
     });
-    let userEducationDetails = JSON.parse(localStorage.getItem("educationDetails"));
-    // console.log(userEducationDetails);
-    if (userEducationDetails) {
+    let userExperienceDetails = JSON.parse(localStorage.getItem("experienceDetails"));
+    // console.log(userExperienceDetails);
+    if (userExperienceDetails) {
       // console.log("bcfihhewbvdfchuwechuvewc");
       this.setState({
-        educationDetails: {
-          ...userEducationDetails,
+        experienceDetails: {
+          ...userExperienceDetails,
         }
       });
-      let schoolName = document.getElementById("schoolName");
-      schoolName.value = userEducationDetails.schoolName;
+      let cityName = document.getElementById("city");
+      cityName.value = userExperienceDetails.city; 
+      let jobTitleName = document.getElementById("jobTitle");
+      jobTitleName.value = userExperienceDetails.jobTitle;
 
-      let schoolLocation = document.getElementById("schoolLocation");
-      schoolLocation.value = userEducationDetails.schoolLocation;
+      let positionName = document.getElementById("position");
+      positionName.value = userExperienceDetails.position;
+      let stateName = document.getElementById("state");
+      stateName.value = userExperienceDetails.state;
 
-      let collegeName = document.getElementById("collegeName");
-      collegeName.value = userEducationDetails.collegeName;
+      let companyName = document.getElementById("companyName");
+      companyName.value = userExperienceDetails.companyName;
 
-      let collegeLocation = document.getElementById("collegeLocation");
-      collegeLocation.value = userEducationDetails.collegeLocation;
+      let aboutCompany = document.getElementById("aboutCompany");
+      aboutCompany.value = userExperienceDetails.aboutCompany;
 
-      let degree = document.getElementById("degree");
-      degree.value = userEducationDetails.degree;
+      let startDate = document.getElementById("startDate");
+      startDate.value = userExperienceDetails.startDate;
 
-      let field = document.getElementById("field");
-      field.value = userEducationDetails.field;
-
-      let schoolCpga = document.getElementById("schoolCpga");
-      schoolCpga.value = userEducationDetails.schoolCpga;
-
-      let collegeCpga = document.getElementById("collegeCpga");
-      collegeCpga.value = userEducationDetails.collegeCpga
-
-      let gStartDate = document.getElementById("gStartDate");
-      gStartDate.value = userEducationDetails.gStartDate;
-
-      let gEndDate = document.getElementById("gEndDate");
-      gEndDate.value = userEducationDetails.gEndDate;
+      let endDate = document.getElementById("endDate");
+      endDate.value = userExperienceDetails.endDate;
     }
   }
   render() {
@@ -91,27 +80,24 @@ class Education extends React.Component {
       <div className="contact-details-container">
         <div className="contact-form">
           <div className="headings">
-            <h3>Tell us about your education.</h3>
-            <h5>
-              Include every school, even if you're still there or didn't
-              graduate...
-            </h5>
+            <h3>Tell us about your most recent job.</h3>
+            <h5>We’ll start there and work backward..</h5>
           </div>
           <div className="form-container">
             <div className="form">
-              <div className="details">
+              <div className="details-exp">
                 <div class="form-floating mb-3">
                   <input
                     type="email"
                     required="required"
                     class="form-control"
-                    id="schoolName"
+                    id="jobTitle"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">School Name</label>
+                  <label for="floatingInput">Job Title</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -119,29 +105,29 @@ class Education extends React.Component {
                     type="text"
                     required="required"
                     class="form-control"
-                    id="schoolLocation"
+                    id="position"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">School Location </label>
+                  <label for="floatingInput">Position</label>
                 </div>
               </div>
               {/* ///// */}
-              <div className="details">
+              <div className="details-exp">
                 <div class="form-floating mb-3">
                   <input
                     type="text"
                     required="required"
                     class="form-control"
-                    id="collegeName"
+                    id="city"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">College Name</label>
+                  <label for="floatingInput">City</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -149,29 +135,29 @@ class Education extends React.Component {
                     type="email"
                     required="required"
                     class="form-control"
-                    id="collegeLocation"
+                    id="state"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">College Location</label>
+                  <label for="floatingInput">State</label>
                 </div>
               </div>
               {/* /// */}
-              <div className="details">
+              <div className="details-exp">
                 <div class="form-floating mb-3">
                   <input
                     type="text"
                     required="required"
                     class="form-control"
-                    id="degree"
+                    id="companyName"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">Degree</label>
+                  <label for="floatingInput">Company Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -179,59 +165,29 @@ class Education extends React.Component {
                     type="email"
                     required="required"
                     class="form-control"
-                    id="field"
+                    id="aboutCompany"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">Field of Study</label>
-                </div>
-              </div>
-              {/* /////////////// */}
-              <div className="details">
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    required="required"
-                    class="form-control"
-                    id="schoolCpga"
-                    placeholder="name@example.com"
-                    onChange={(e) => {
-                      this.onChangeHandler(e);
-                    }}
-                  ></input>
-                  <label for="floatingInput">CGPA/Percentage In School</label>
-                </div>
-
-                <div class="form-floating mb-3 ">
-                  <input
-                    type="text"
-                    required="required"
-                    class="form-control"
-                    id="collegeCpga"
-                    placeholder="name@example.com"
-                    onChange={(e) => {
-                      this.onChangeHandler(e);
-                    }}
-                  ></input>
-                  <label for="floatingInput">CGPA/Percentage In College</label>
+                  <label for="floatingInput">About Company</label>
                 </div>
               </div>
               {/* {///////////} */}
-              <div className="details">
+              <div className="details-exp">
                 <div class="form-floating mb-3">
                   <input
                     type="date"
                     required="required"
                     class="form-control"
-                    id="gStartDate"
+                    id="startDate"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">Graduation Start Date</label>
+                  <label for="floatingInput">Start Date</label>
                 </div>
 
                 <div class="form-floating mb-3 ">
@@ -239,24 +195,25 @@ class Education extends React.Component {
                     type="date"
                     required="required"
                     class="form-control"
-                    id="gEndDate"
+                    id="endDate"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
                     }}
                   ></input>
-                  <label for="floatingInput">Graduation End Date</label>
+                  <label for="floatingInput">End Date</label>
                 </div>
               </div>
-              {/* //////////// */}
             </div>
           </div>
           <div className="btn-conatiner">
-            <Link to="/contact">
+            <Link to="/edu">
               <div className="btn1">Back</div>
             </Link>
-            <Link to="/exp">
-              <div className="btn1" onClick={this.nextButtonHandler}>Next</div>
+            <Link to="skills">
+              <div className="btn1" onClick={this.nextButtonHandler}>
+                Next
+              </div>
             </Link>
           </div>
         </div>
@@ -271,4 +228,4 @@ class Education extends React.Component {
   }
 }
 
-export default Education;
+export default Experience;
