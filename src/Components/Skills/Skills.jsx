@@ -23,6 +23,15 @@ class Skills extends React.Component {
       JSON.stringify(oldSkillsDetails)
     );
   };
+  addSkillInput = () => {
+    console.log("inside input function");
+    let skillDetailsDiv = document.querySelector(".skill-details");
+    let inputTag = document.querySelector("#input-tag");
+    let inputTagNode = document.importNode(inputTag , true);
+    if(skillDetailsDiv.childNodes.length < 3){
+      skillDetailsDiv.appendChild(inputTagNode);
+    }
+  }
   componentDidMount() {
     let skinPath = JSON.parse(localStorage.getItem("skinPath"));
     console.log("skinId=>>>" + skinPath);
@@ -41,6 +50,7 @@ class Skills extends React.Component {
       skillInput.value = JSON.parse(skillsDetails);
     }
   }
+
   render() {
     return (
       <div className="contact-details-container">
@@ -64,21 +74,8 @@ class Skills extends React.Component {
                     }}
                   ></input>
                   <label for="floatingInput">Write About your skills</label>
+                
                 </div>
-
-                {/* <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    required="required"
-                    class="form-control"
-                    id="position"
-                    placeholder="name@example.com"
-                    onChange={(e) => {
-                      this.onChangeHandler(e);
-                    }}
-                  ></input>
-                  <label for="floatingInput">Position</label>
-                </div> */}
               </div>
               {/* ///// */}
             </div>
@@ -98,8 +95,25 @@ class Skills extends React.Component {
           <div className="skin-img-container">
             <img src={this.state.skinPath} alt="" />
           </div>
-          {/* <div className="btn"></div> */}
+          <div class="skill-add-btn" onClick={this.addSkillInput}>Add skills</div>
         </div>
+        <template id="input-template">
+          <div class="form-floating mb-3 skill" id="input-tag">
+            <input
+              type="text"
+              required="required"
+              class="form-control"
+              id="skills"
+              placeholder="name@example.com"
+              onChange={(e) => {
+                this.onChangeHandler(e);
+              }}
+            ></input>
+            <label for="floatingInput">Write About your skills</label>
+            {/* <div class="skill-add-btn" onClick={this.addSkillInput}>Add skills</div> */}
+          </div>
+        </template>
+
       </div>
     );
   }

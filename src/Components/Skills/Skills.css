@@ -1,27 +1,44 @@
-.skill-form-container{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 35%;
-    margin-top: 3%;
+.skill-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 35%;
+  margin-top: 3%;
 }
-.skill-form{
-    
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+.skill-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.skill-details{
-
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.skill-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: scroll;
 }
 .skill {
-    width: 90%;
-  }
-  
+  width: 80%;
+  display: flex;
+}
+.skill-add-btn {
+  display: flex;
+  border: 1px solid;
+
+  width: 60%;
+  height: 5%;
+
+  margin-top: 4%;
+  margin-left: 1%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.skill-add-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#skills {
+  width: 70%;
+}

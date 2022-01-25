@@ -105,7 +105,7 @@ class Resume1 extends React.Component {
                   <h6>profession : {CDetails.profession}</h6>
                 </div>
                 <div className="vl">
-                  <h6>email : {CDetails.email}</h6>
+                  <h6>email : {CDetails}</h6>
                 </div>
                 <div className="vl">
                   <h6>Phone : {CDetails.phone}</h6>

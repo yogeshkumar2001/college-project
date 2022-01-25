@@ -94,7 +94,7 @@ class MySkin extends Component {
 
 
         return ( 
-            <div className="resume-skin" ref={this.props.refProp}>
+            <div className="resume-skin">
                 <div className="resume-left-strap">
                     {
                         skills.length

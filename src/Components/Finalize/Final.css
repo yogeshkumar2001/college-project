@@ -1,67 +1,41 @@
-.final{
-height: 100vh;
-width: 98vw;
+.final {
+  height: 100vh;
+  width: 98vw;
 }
-.resume-view-container{
-    /* height: 100%; */
-    width: 100%;
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: space-evenly;
+.resume-view-container {
+  /* height: 100%; */
+  width: 100%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-evenly;
 }
-.download-view{
-    /* border: 1px solid green; */
-    display: flex;
-    width: 15%;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
+.resume-view {
+  padding: 1%;
+  height: 100%;
+  border: 3px solid yellow;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.download-btn{
-    border: 1px solid green;
-    width:100%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.download-view {
+  /* border: 1px solid green; */
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
-.download-btn:hover{
-    background: #2475FD;
-    color: white;
-    cursor: pointer;
+.download-btn {
+  border: 1px solid green;
+  width: 100%;
+  height: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
 }
-/* city: ""
-country: ""
-email: ""
-fname: "Yogesh"
-lname: ""
-phone: ""
-pin: ""
-profession: ""
-state: ""
-street: ""
-summary: "" */
-
-
-/* aboutCompany: ""
-city: ""
-companyName: ""
-endDate: ""
-jobTitle: ""
-position: ""
-startDate: ""
-state */
-
-/* collegeCpga: ""
-collegeLocation: ""
-collegeName: ""
-degree: ""
-field: ""
-gEndDate: ""
-gStartDate: ""
-schoolCpga: ""
-schoolLocation: ""
-schoolName: "" */
-
-/* achievement: ""
-hobbies: "" */
+.download-btn:hover {
+  background: #2475fd;
+  color: white;
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ import Skin2 from "../Skins/skinv"
 class Final extends React.Component {
   resume = React.createRef();
   state={
-      skinId:null
+      skinId:""
   }
   componentDidMount() {
       let skinId = JSON.parse(localStorage.getItem("skinId"));
@@ -18,7 +18,7 @@ class Final extends React.Component {
       }
   }
   render() {
-    let skint = "skinv";
+    let skint = this.state.skinId;
     if (skint == "skin1") {
         skint = <Skin1 refProp={this.resume} ></Skin1>
     }else if(skint=="skinv"){
@@ -32,7 +32,9 @@ class Final extends React.Component {
         {/* <h1 style={{"margin-left":"300px"}}>Your Final Resume Is Here</h1> */}
         <div className="resume-view-container">
           <div className="resume-view">
+          <React.Fragment>
             {skint}
+          </React.Fragment>
           </div>
           <ReactToPdf targetRef={this.resume} filename="resume.pdf">
             {({ toPdf }) => (
