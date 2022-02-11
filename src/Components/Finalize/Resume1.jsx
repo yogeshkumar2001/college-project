@@ -12,6 +12,7 @@ class Resume1 extends React.Component {
     },
   };
   componentDidMount() {
+   console.log("cmd of Resume1");
     let lcexperienceDetails = JSON.parse(
       window.localStorage.getItem("experienceDetails")
     );
@@ -21,9 +22,12 @@ class Resume1 extends React.Component {
     let lccontactDetails = JSON.parse(
       window.localStorage.getItem("contactDetails")
     );
-    let lcskills = JSON.parse(localStorage.getItem("skills"));
+    let lcskills = window.localStorage.getItem("skills");
     let lcabout= JSON.parse(window.localStorage.getItem("about"));
+    // let experienceDetails = JSON.parse(window.localStorage.getItem("experienceDetails"));
+    // console.log(experienceDetails);
     let oldfinalDetails = this.state.finalDetails;
+    console.log(this.state.finalDetails);
     this.setState({
       finalDetails: {
         ...oldfinalDetails,
@@ -80,7 +84,8 @@ class Resume1 extends React.Component {
               </div>
 
               <table>
-                <tr>
+               <tbody>
+               <tr>
                   <th>Name</th>
                   <th>CGPA</th>
                   <th>Location</th>
@@ -92,9 +97,10 @@ class Resume1 extends React.Component {
                 </tr>
                 <tr>
                   <td>{edu.collegeName}</td>
-                  <td>{edu.collegeCpga}</td>
+                  <td>{edu.collegeCgpa}</td>
                   <td>{edu.collegeLocation}</td>
                 </tr>
+               </tbody>
               </table>
             </div>
             <div className="contact">
@@ -105,7 +111,7 @@ class Resume1 extends React.Component {
                   <h6>profession : {CDetails.profession}</h6>
                 </div>
                 <div className="vl">
-                  <h6>email : {CDetails}</h6>
+                  <h6>email : {CDetails.email}</h6>
                 </div>
                 <div className="vl">
                   <h6>Phone : {CDetails.phone}</h6>

@@ -53,7 +53,34 @@ class MySkin extends Component {
           hobbies : ["hobby 1" , "hobby 2" , "hobby 3" , "hobby 4" ]
      };
 
-
+     componentDidMount() {
+        console.log("cmd of Resume1");
+         let lcexperienceDetails = JSON.parse(
+           window.localStorage.getItem("experienceDetails")
+         );
+         let lceducationDetails = JSON.parse(
+           window.localStorage.getItem("educationDetails")
+         );
+         let lccontactDetails = JSON.parse(
+           window.localStorage.getItem("contactDetails")
+         );
+         let lcskills = window.localStorage.getItem("skills");
+         let lcabout= JSON.parse(window.localStorage.getItem("about"));
+         // let experienceDetails = JSON.parse(window.localStorage.getItem("experienceDetails"));
+         // console.log(experienceDetails);
+         let oldfinalDetails = this.state.finalDetails;
+         console.log(this.state.finalDetails);
+         this.setState({
+           finalDetails: {
+             ...oldfinalDetails,
+             experienceDetails: lcexperienceDetails,
+             educationDetails: lceducationDetails,
+             contactDetails: lccontactDetails,
+             about:lcabout,
+             skills: lcskills,
+           },
+         });
+       }
 
     render() { 
 
@@ -95,7 +122,7 @@ class MySkin extends Component {
 
         return ( 
             <div className="resume-skin">
-                <div className="resume-left-strap">
+                <div className="resume-left-strap"  >
                     {
                         skills.length
                         ?
@@ -191,7 +218,7 @@ class MySkin extends Component {
                     </div>
                 </div>
                 <div className="resume-body">
-                    <div className="edutation-details details">
+                    <div className="edutation-details resume-de">
                         <div className="heading">EDUCATION DETAILS</div>
                         <div className="content-body">
                             <div className="college-details">
@@ -211,7 +238,7 @@ class MySkin extends Component {
                     {
                         experienceDetails.length
                         ?
-                            <div className="experience-details details">
+                            <div className="experience-details resume-de">
                                 <div className="heading">EXPERIENCE</div>
                                 <div className="content-body">
                                     {
@@ -233,7 +260,7 @@ class MySkin extends Component {
                     {
                         projects.length
                         ? 
-                        <div className="project-details details">
+                        <div className="project-details resume-de">
                             <div className="heading">PROJECTS</div>
                             <div className="content-body">
                                 {
@@ -260,7 +287,7 @@ class MySkin extends Component {
                         POR.length 
                         ?
                         (
-                        <div className="por-details details">
+                        <div className="por-details resume-de">
                             <div className="heading">POSITION OF RESPONSIBILITY</div>
                             <div className="content-body">
                             {

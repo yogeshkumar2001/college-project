@@ -10,13 +10,14 @@
 
 
 /* general styling */
-/* .details{
+.resume-de{
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: 5px;
-} */
+}
 .content-body{
     display: flex;
     flex-direction: column;

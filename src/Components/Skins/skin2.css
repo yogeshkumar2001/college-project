@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    height: 2000px;
+    width: 360px;
+    background-color: rgb(166, 212, 252);
+}
+
+.skills{
+    position: absolute;
+    top: 100px;
+    left: 5px;
+    font-size: 1.8rem;
+    padding: 4px 117px;
+    background: white;
+   
+    
+}
+  
+.list{
+    
+    position: absolute;
+    top: 118px;
+    left: 5px;
+    padding: 12px;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.achivements{
+    position: absolute;
+    top: 658px;
+    left: 5px;
+    font-size: 1.8rem;
+    padding: 4px 60px;
+    background: white;
+    
+}
+
+.ach{
+    
+    position: absolute;
+    top: 678px;
+    left: 5px;
+    padding: 12px;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+}
+  
+
+.interests{
+    position: absolute;
+    top: 1048px;
+    left: 5px;
+    font-size: 1.8rem;
+    padding: 4px 90px;
+    background: white;
+    
+}
+
+.hobby{
+    
+    position: absolute;
+    top: 1063px;
+    left: 5px;
+    padding: 12px;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contact{
+    position: absolute;
+    top: 1298px;
+    left: 5px;
+    font-size: 1.8rem;
+    padding: 4px 90px;
+    background: white;
+    
+}
+
+.tony{
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    font-size: 4rem;
+    font-family: 'Domine', serif;
+    
+}
+
+.soft{
+    position: absolute;
+    top: 120px;
+    left: 415px;
+    font-size: 1.8rem;
+}
+
+.para{
+    position: absolute;
+    top: 185px;
+    left: 400px;
+    border-radius: 20px;
+    width: 1000px;
+    font-size: 1.1rem;
+    padding: 23px 34px;
+     background-color: rgb(189, 221, 250);
+     font-family: 'DM Sans', sans-serif;
+    
+}
+
+.edu{
+    position: absolute;
+    top: 380px;
+    left: 650px;
+    font-size: 1.8rem;
+    padding: 4px 117px;
+    background: rgb(158, 207, 250);
+    
+}
+
+.uc{
+    position: absolute;
+    top: 440px;
+    left: 840px;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.experience{
+    position: absolute;
+    top: 850px;
+    left: 750px;
+    width: 160px;
+    font-size: 1.8rem;
+    padding: 4px 117px;
+    background: rgb(158, 207, 250);
+    
+}
+
+.exp{
+    position: absolute;
+    top: 900px;
+    left: 540px;
+    list-style: none;
+    font-size: 1.5rem;
+    
+}
+
+
+.projects{
+    position: absolute;
+    top: 1230px;
+    left: 770px;
+    font-size: 1.8rem;
+    padding: 4px 117px;
+    background: rgb(158, 207, 250);
+    
+}
+
+
+.pr{
+    position: absolute;
+    top: 1280px;
+    left: 780px;
+    list-style: none;
+    font-size: 1.5rem;
+    
+}
+
+
+.position{
+    position: absolute;
+    top: 1630px;
+    left: 630px;
+    font-size: 1.8rem;
+    padding: 4px 117px;
+    background: rgb(158, 207, 250);
+    
+}
+
+
+.por{
+    position: absolute;
+    top: 1670px;
+    left: 780px;
+    list-style: none;
+    font-size: 1.5rem;
+    
+}
+
+.cn{
+    
+    position: absolute;
+    top: 1363px;
+    left: 5px;
+    padding: 12px;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+}

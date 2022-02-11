@@ -5,9 +5,9 @@ class Skills extends React.Component {
   state = {
     skills: "",
     skinPath: "",
+    skillsArr:[]
   };
   onChangeHandler = (e) => {
-    // console.log(contactCodes);
     let id = e.target.id;
     let value = e.target.value;
     this.setState({
@@ -16,20 +16,25 @@ class Skills extends React.Component {
   };
   nextButtonHandler = () => {
     console.log("next button clicked !!");
-
     let oldSkillsDetails = this.state.skills;
+    let skillarr = this.state.skills.trim().split(",");
+    console.log(skillarr);
     localStorage.setItem(
       "skills",
-      JSON.stringify(oldSkillsDetails)
+      skillarr
     );
   };
+
   addSkillInput = () => {
     console.log("inside input function");
     let skillDetailsDiv = document.querySelector(".skill-details");
-    let inputTag = document.querySelector("#input-tag");
-    let inputTagNode = document.importNode(inputTag , true);
-    if(skillDetailsDiv.childNodes.length < 3){
-      skillDetailsDiv.appendChild(inputTagNode);
+    let inputTemplate = document.querySelector("#input-template");
+    let inputDiv = inputTemplate.querySelector(".skill");
+    let inputTag = inputDiv.querySelector(".skills");
+    console.log(inputTag);
+    let inputDivNode = document.importNode(inputDiv , true);
+    if(skillDetailsDiv.childNodes.length < 10){
+      skillDetailsDiv.appendChild(inputDivNode);
     }
   }
   componentDidMount() {
@@ -44,10 +49,10 @@ class Skills extends React.Component {
     if (skillsDetails) {
       // console.log("bcfihhewbvdfchuwechuvewc");
       this.setState({
-        skills: skillsDetails
+        skillsArr: skillsDetails
       });
       let skillInput = document.getElementById("skills");
-      skillInput.value = JSON.parse(skillsDetails);
+      skillInput.value = skillsDetails;
     }
   }
 
@@ -98,7 +103,7 @@ class Skills extends React.Component {
           <div class="skill-add-btn" onClick={this.addSkillInput}>Add skills</div>
         </div>
         <template id="input-template">
-          <div class="form-floating mb-3 skill" id="input-tag">
+          <div class="form-floating mb-3 skill" >
             <input
               type="text"
               required="required"
@@ -110,7 +115,6 @@ class Skills extends React.Component {
               }}
             ></input>
             <label for="floatingInput">Write About your skills</label>
-            {/* <div class="skill-add-btn" onClick={this.addSkillInput}>Add skills</div> */}
           </div>
         </template>
 

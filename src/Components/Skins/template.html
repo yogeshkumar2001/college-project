@@ -1,87 +1,26 @@
-import React, { Component } from "react";
-import "./skin11.css";
-class Skin extends Component {
-  state = {
-    contactDetails: {
-      fname: "",
-      lname: "",
-      summary: "",
-      email: "",
-      phone: "",
-      profession: "",
-      street: "",
-      city: "",
-      state: "",
-      country: "",
-      pin: "",
-    },
-    educationDetails: {
-      collegeName: "",
-      degree: "",
-      cgpa: "",
-      collegeCity: "",
-      collegeState: "",
-      graduationMonth: "",
-      graduationYear: "",
-    },
-    experienceDetails: [
-      { companyName: "", duration: "", position: "" },
-      { companyName: "", duration: "", position: "" },
-      { companyName: "", duration: "", position: "" },
-    ],
-    projects: [
-      { projectName: "A", techStack: ["E", "F", "G"], summary: "asfasf" , projectLink:"" },
-      { projectName: "B", techStack: ["J", "I", "H"], summary: "asgasdg" , projectLink:""},
-      { projectName: "C", techStack: ["K", "L", "M"], summary: "asdgasg"  , projectLink:""},
-      { projectName: "D", techStack: ["P", "O", "N"], summary: "asdgasg"  , projectLink:""}
-    ],
-    skills : {
-        language : ["" , "" , ""] ,
-        frameworks : ["" , "" , ""] ,
-        software : ["" , "" , ""] ,
-        ide : ["" , "" , ""]
-    } ,
-    profileLinks : {
-        linkedIn : "" ,
-        github : "" 
-    } ,
-    achievements : ["" ,"" ,"" , "" ,""] ,
-    hobbies : ["" , "" , "" , "" , ""] 
-  };
-  render() {
-    let {
-      fname,
-      lname,
-      summary,
-      email,
-      phone,
-      profession,
-      street,
-      city,
-      state,
-      country,
-      pin,
-    } = this.state.contactDetails;
-    let {
-      collegeName,
-      degree,
-      cgpa,
-      collegeCity,
-      collegeState,
-      graduationMonth,
-      graduationYear,
-    } = this.state.educationDetails;
-
-    let projects = this.state.projects;
-    return (
-      
-      // projects: [
-      //   { projectName: "", techStack: ["", "", ""], summary: "" , projectLink:"" },
-      //   { projectName: "", techStack: ["", "", ""], summary: "" , projectLink:""},
-      //   { projectName: "", techStack: ["", "", ""], summary: ""  , projectLink:""},
-      //   { projectName: "", techStack: ["", "", ""], summary: ""  , projectLink:""}
-      // ]
-      <div class="box">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tony Almedia</title>
+    <link rel="stylesheet" href="./template.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box">
       <div class="skills">SKILLS</div>
       <div class="list">
         <ul>
@@ -191,8 +130,5 @@ class Skin extends Component {
         </ul>
       </div>
     </div>
-    );
-  }
-}
-
-export default Skin;
+  </body>
+</html>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./skin1.css";
-class Skin1 extends Component {
+class  Skin1 extends Component {
   state = {
     contactDetails: {
       fname: "Ishika",
