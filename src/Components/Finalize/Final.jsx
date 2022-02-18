@@ -4,9 +4,9 @@ import "./Final.css";
 import Resume1 from "./Resume1";
 import Skin1 from "../Skins/skin1";
 import Skin2 from "../Skins/skinv";
-import Skin3 from "../Skins/skin11";
+import Skin3 from "../Skins/Skin3";
 import Skin4 from "../Skins/skin4";
-import Skin5 from "../Skins/skin5";
+// import Skin5 from "../Skins/skin5";
 class Final extends React.Component {
   resume = React.createRef();
   state={
@@ -35,7 +35,7 @@ componentDidMount() {
     }else if(skinId == "skin4"){
       tskin = <Skin4 refProp={this.resume}></Skin4>
     }else if(skinId == "skin5"){
-      tskin = <Skin5></Skin5>
+      // tskin = <Skin5></Skin5>
     }
     else{
       tskin = <Resume1 refProp={this.resume}></Resume1>
@@ -62,7 +62,6 @@ componentDidMount() {
           </ReactToPdf>
           
         </div>
-        
       </div>
     );
   }
