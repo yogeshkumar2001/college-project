@@ -9,8 +9,8 @@ class Education extends React.Component {
       collegeLocation: "",
       degree: "",
       field: "",
-      schoolCpga: "",
-      collegeCpga: "",
+      schoolCgpa: "",
+      collegeCgpa: "",
       gStartDate: "",
       gEndDate: ""
     },
@@ -73,11 +73,11 @@ class Education extends React.Component {
       let field = document.getElementById("field");
       field.value = userEducationDetails.field;
 
-      let schoolCpga = document.getElementById("schoolCpga");
-      schoolCpga.value = userEducationDetails.schoolCpga;
+      let schoolCgpa = document.getElementById("schoolCgpa");
+      schoolCgpa.value = userEducationDetails.schoolCgpa;
 
-      let collegeCpga = document.getElementById("collegeCpga");
-      collegeCpga.value = userEducationDetails.collegeCpga
+      let collegeCgpa = document.getElementById("collegeCgpa");
+      collegeCgpa.value = userEducationDetails.collegeCgpa
 
       let gStartDate = document.getElementById("gStartDate");
       gStartDate.value = userEducationDetails.gStartDate;
@@ -195,7 +195,7 @@ class Education extends React.Component {
                     type="text"
                     required="required"
                     class="form-control"
-                    id="schoolCpga"
+                    id="schoolCgpa"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);
@@ -209,7 +209,7 @@ class Education extends React.Component {
                     type="text"
                     required="required"
                     class="form-control"
-                    id="collegeCpga"
+                    id="collegeCgpa"
                     placeholder="name@example.com"
                     onChange={(e) => {
                       this.onChangeHandler(e);

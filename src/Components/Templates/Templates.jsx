@@ -22,34 +22,21 @@ class Templates extends Component {
 
   handleChooseTemplate = async (e) => {
     let skinId = e.target.id;
-    console.log(e)
-    console.log(e.target.attributes[2].nodeValue)
-    console.log(skinId);
     localStorage.setItem("skinPath" ,JSON.stringify(e.target.attributes[2].nodeValue) );
     localStorage.setItem("skinId" ,JSON.stringify(skinId) );
     // get skinID
     let selectResumeId;
      selectResumeId = localStorage.getItem("selectedResumeId");
      console.log(selectResumeId);
-    let resumeId;
-    if(!this.props.selectedResumeId){
+     let resumeId;
+    if(!selectResumeId){
       let addObj = await firebaseApp.firestore().collection("resumes").add( { skinId : skinId , ...initialState  }  );
       resumeId = addObj.id;
-      console.log(resumeId);
-      
       await firebaseApp.firestore().collection("users").doc(this.props.uid).update({
         Resumes: firebase.firestore.FieldValue.arrayUnion(resumeId)
       })
-      // this.props.history.push("/contact");
-      this.props.setResumeId(resumeId);
-      let skinPath = {}
-    }
-    else{
-    // this.props.history.push({
-    //   pathname: "/contact",
-    //   state: { skinId: skinId },
-    // });
-    // console.log(selectedResumeId)
+      console.log("resume id "+resumeId);
+      localStorage.setItem("selectedResumeId" ,resumeId);
     }
   };
   componentDidMount(){

@@ -1,8 +1,60 @@
 import React, { Component } from 'react';
 import "./skin2.css"
 class skin2 extends Component {
-    state = {}
+    state = {
+        finalDetails: {
+            contactDetails: {},
+            educationDetails: {},
+            experienceDetails: {},
+            skills: "",
+            about: {},
+            skillsArr: [],
+            achievementArr:[],
+            hobbiesArr : []
+            // skinId:""
+        },
+    };
+
+    componentDidMount() {
+
+        console.log("cmd of Resume1");
+        let lcexperienceDetails = JSON.parse(
+            window.localStorage.getItem("experienceDetails")
+        );
+        let lceducationDetails = JSON.parse(
+            window.localStorage.getItem("educationDetails")
+        );
+        let lccontactDetails = JSON.parse(
+            window.localStorage.getItem("contactDetails")
+        );
+        let lcskills = window.localStorage.getItem("skills");
+        let skillsArr = lcskills.split(",");
+        let lcabout = JSON.parse(window.localStorage.getItem("about"));
+        let achievementArr = lcabout.achievement.split(",");
+        let hobbiesArr = lcabout.hobbies.split(",");
+        let oldfinalDetails = this.state.finalDetails;
+        this.setState({
+            finalDetails: {
+                ...oldfinalDetails,
+                experienceDetails: lcexperienceDetails,
+                educationDetails: lceducationDetails,
+                contactDetails: lccontactDetails,
+                about: lcabout,
+                skills: lcskills,
+                skillsArr: skillsArr,
+                achievementArr:achievementArr,
+                hobbiesArr:hobbiesArr
+            },
+        });
+    }
     render() {
+        let CDetails = this.state.finalDetails.contactDetails;
+        let edu = this.state.finalDetails.educationDetails;
+        let ED = this.state.finalDetails.experienceDetails;
+        let skillsArr = this.state.finalDetails.skillsArr;
+        let about = this.state.finalDetails.about;
+        let achievementArr =this.state.finalDetails.achievementArr;
+        let hobbiesArr =this.state.finalDetails.hobbiesArr;
         return (
             <div className="div"  ref={this.props.refProp}>
                 <div class="box">

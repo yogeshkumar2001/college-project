@@ -1,0 +1,120 @@
+* {
+  margin: 0x;
+  box-sizing: 0px;
+}
+.skin6-cont {
+  /* border: 1px solid red; */
+  width: 21cm;
+  height: 29.7cm;
+  border: 1px solid;
+}
+.skin6-incont {
+  /* border: 1px solid darkcyan; */
+  height: 100%;
+  width: 95%;
+  padding: 0% 0% 0% 2%;
+}
+.skin6box {
+  /* border: 1px solid; */
+  height: 15%;
+}
+.skin6box1 {
+  /* border: 1px solid; */
+  height: 10%;
+}
+.skin6box1-upr {
+  font-size: xxx-large;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.skin6box1-dwn {
+  color: #958fa8;
+}
+.skin6box-upr {
+  font-weight: 900;
+
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+.skin6box-dwn {
+  word-spacing: 10px;
+  line-height: 1.6;
+}
+
+.box {
+  /* border: 1px solid green; */
+  height: 16.5%;
+}
+.inner-box {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skin7-border1 {
+  /* background: #f1f0f0; */
+  height: 13%;
+  width: 100%;
+  border-bottom: 1px solid;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.border1 span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.school-info-skin4 {
+  margin-top: 2%;
+  /* display: flex; */
+  /* background-color: antiquewhite; */
+  height: 100%;
+  width: 100%;
+  /* margin-left: 5%; */
+}
+.school-con {
+  height: 49%;
+  width: 50%;
+
+  text-align: center;
+}
+
+.school-con-box {
+  border: 1px solid;
+  margin: 2%;
+}
+
+.exp-info-skin4-box {
+  font-weight: bold;
+  font-size: large;
+}
+.exp-info-skin4-box2 {
+  margin-left: 2%;
+}
+.skill-box div ul li {
+  margin-left: 6%;
+  /* background-color: red; */
+}
+.skill-box div ul {
+  display: flex;
+}
+.d-box {
+  height: 13.5%;
+}
+
+.school-info-box1 {
+  display: flex;
+  width: 100%;
+  /* margin-left: -2%; */
+}
+.school-info-hd {
+  margin-left: 13%;
+  font-size: larger;
+  font-weight: bolder;
+}
+.school-info-innerbox2 {
+  margin-left: 10%;
+}

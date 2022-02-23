@@ -2,99 +2,44 @@ import React, { Component } from "react";
 import "./skin1.css";
 class  Skin1 extends Component {
   state = {
-    contactDetails: {
-      fname: "Ishika",
-      lname: "Goel",
-      summary:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni, perspiciatis,placeat quidem ipsum officiis, nemo mollitia optio labore hic maiores repudiandae est debitis inventore vel pariatur deleniti? Obcaecati, odit!",
-      email: "ishikagoel@gmail.com",
-      phone: "+91 7537285630",
-      profession: "Software Engineer",
-      street: "Kavi nagar",
-      city: "Ghaziabad",
-      state: "Uttar Pradesh",
-      country: "India",
-      pin: "201001",
+    finalDetails: {
+      contactDetails: {},
+      educationDetails: {},
+      experienceDetails: {},
+      skills: "",
+      about: {},
+      skillsArr:[]
+      // skinId:""
     },
-    educationDetails: {
-      collegeName: "Indira Gandhi Delhi Technical University for Women",
-      degree: "Bachelor of Technology in Computer Science",
-      cgpa: "8.5",
-      collegeCity: "New Delhi",
-      collegeState: "Delhi",
-      collegeCountry: "India",
-      duration: "2018 - 2022",
-    },
-    experienceDetails: [
-      {
-        companyName: "Google",
-        duration: "June 2019 - July 2019",
-        position: "Software Engineer Intern",
-        role:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iusto minima distinctio odit, iste animi amet provident, alias iure qui ut excepturi nihil, placeat ea dolore maxime quas dicta quia.",
-      },
-      {
-        companyName: "Microsoft",
-        duration: "June 2020 - July 2020",
-        position: "Software Engineer Intern",
-        role:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iusto minima distinctio odit, iste animi amet provident, alias iure qui ut excepturi nihil, placeat ea dolore maxime quas dicta quia.",
-      },
-      {
-        companyName: "Deutsche Bank",
-        duration: "June 2021 - July 2021",
-        position: "Software Engineer Intern",
-        role:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iusto minima distinctio odit, iste animi amet provident, alias iure qui ut excepturi nihil, placeat ea dolore maxime quas dicta quia.",
-      },
-    ],
-    projects: [
-      {
-        projectName: "Project 1",
-        techStack: ["ahjfex", "fdghuij", "vsfajgkhj"],
-        summary:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nisi, repellat similique enim ipsum laudantium reiciendis voluptates, deleniti pariatur, excepturi aspernatur nihil minima repellendus a ad.",
-        projectLink: "www.gxdefyb.com",
-      },
-      {
-        projectName: "Project 2",
-        techStack: ["rehjk", "wetyfug", "dsfghvjbn"],
-        summary:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, id. Minus quia libero nesciunt. Quas, sed neque cum molestiae consectetur magnam omnis dolore corrupti nam laboriosam nostrum vero, assumenda minus!",
-        projectLink: "www.tewghio.com",
-      },
-      {
-        projectName: "Project 3",
-        techStack: ["qewrfyguh", "rdftygu", "dfg"],
-        summary:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quis vero commodi beatae, temporibus itaque alias? Rerum repudiandae nesciunt quos quae, quasi sequi repellat commodi eligendi.",
-        projectLink: "www.fegyuh.com",
-      },
-    ],
-    skills: {
-      language: ["C/C++", "Java", "Javascript"],
-      frameworks: ["ceay", "xqehgrt", "zrtqyu"],
-      software: ["ev3y2qj", "e23vg", "3v2hz1"],
-      ide: ["wyixl", "q2zdfgh", "zwscj"],
-    },
-    profileLinks: {
-      linkedIn: "www.linkedin.com/ishikegoel",
-      github: "www.github.com/ishikagoel",
-    },
-    achievements: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio voluptates minus eaque numquam vero doloremque cumque molestiae, adipisci, sint quod consequatur cupiditate fuga veritatis nemo aperiam. Quasi, incidunt laudantium.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio voluptates minus eaque numquam vero doloremque cumque molestiae, adipisci, sint quod consequatur cupiditate fuga veritatis nemo aperiam. Quasi, incidunt laudantium.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio voluptates minus eaque numquam vero doloremque cumque molestiae, adipisci, sint quod consequatur cupiditate fuga veritatis nemo aperiam. Quasi, incidunt laudantium.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio voluptates minus eaque numquam vero doloremque cumque molestiae, adipisci, sint quod consequatur cupiditate fuga veritatis nemo aperiam. Quasi, incidunt laudantium.",
-    ],
-    hobbies: [
-      "xquvyutyiomqz hgqwefh",
-      "yavjuwtbhzqd",
-      "zqfiuykewiql",
-      "zqerc",
-      "zqfjyuzq zqfdjtyfmjg",
-    ],
   };
+  componentDidMount() {
+   console.log("cmd of Resume1");
+    let lcexperienceDetails = JSON.parse(
+      window.localStorage.getItem("experienceDetails")
+    );
+    let lceducationDetails = JSON.parse(
+      window.localStorage.getItem("educationDetails")
+    );
+    let lccontactDetails = JSON.parse(
+      window.localStorage.getItem("contactDetails")
+    );
+    let lcskills = window.localStorage.getItem("skills");
+    let lcabout= JSON.parse(window.localStorage.getItem("about"));
+    // let experienceDetails = JSON.parse(window.localStorage.getItem("experienceDetails"));
+    // console.log(experienceDetails);
+    let oldfinalDetails = this.state.finalDetails;
+    console.log(this.state.finalDetails);
+    this.setState({
+      finalDetails: {
+        ...oldfinalDetails,
+        experienceDetails: lcexperienceDetails,
+        educationDetails: lceducationDetails,
+        contactDetails: lccontactDetails,
+        about:lcabout,
+        skills: lcskills,
+      },
+    });
+  }
   render() {
     let {
       fname,

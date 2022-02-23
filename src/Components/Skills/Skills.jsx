@@ -10,6 +10,7 @@ class Skills extends React.Component {
   onChangeHandler = (e) => {
     let id = e.target.id;
     let value = e.target.value;
+    let skillValue = this.state.skills;
     this.setState({
       skills: value,
     });
@@ -17,11 +18,9 @@ class Skills extends React.Component {
   nextButtonHandler = () => {
     console.log("next button clicked !!");
     let oldSkillsDetails = this.state.skills;
-    let skillarr = this.state.skills.trim().split(",");
-    console.log(skillarr);
     localStorage.setItem(
       "skills",
-      skillarr
+      oldSkillsDetails
     );
   };
 
@@ -49,7 +48,7 @@ class Skills extends React.Component {
     if (skillsDetails) {
       // console.log("bcfihhewbvdfchuwechuvewc");
       this.setState({
-        skillsArr: skillsDetails
+        skills: skillsDetails
       });
       let skillInput = document.getElementById("skills");
       skillInput.value = skillsDetails;

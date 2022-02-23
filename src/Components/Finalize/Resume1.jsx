@@ -24,10 +24,8 @@ class Resume1 extends React.Component {
     );
     let lcskills = window.localStorage.getItem("skills");
     let lcabout= JSON.parse(window.localStorage.getItem("about"));
-    // let experienceDetails = JSON.parse(window.localStorage.getItem("experienceDetails"));
-    // console.log(experienceDetails);
     let oldfinalDetails = this.state.finalDetails;
-    console.log(this.state.finalDetails);
+    console.log(oldfinalDetails);
     this.setState({
       finalDetails: {
         ...oldfinalDetails,

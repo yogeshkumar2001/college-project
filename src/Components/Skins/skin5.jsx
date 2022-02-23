@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "./skin3.css";
-class Skin3 extends Component {
+import "./skin5.css";
+class Skin5 extends Component {
     state = {
         finalDetails: {
             contactDetails: {},
@@ -56,10 +56,10 @@ class Skin3 extends Component {
         let achievementArr =this.state.finalDetails.achievementArr;
         let hobbiesArr =this.state.finalDetails.hobbiesArr;
         return (
-            <div class="skin3-cont" ref={this.props.refProp}>
-                <div class="skin3-incon">
-                    <div class="skin3b1">
-                        <div class="hbox1">
+            <div class="skin5-cont" ref={this.props.refProp}>
+                <div class="skin5-incon">
+                    <div class="skin5b1">
+                        <div class="skin5hbox1">
                             YK
                         </div>
                         <div class="hbox2">
@@ -68,25 +68,25 @@ class Skin3 extends Component {
                             <div class="line"></div>
                         </div>
                     </div>
-                    <div class="skin3b2">
-                        <div class="skin3bl">
-                            <div class="skin3p">PROFESSIONAL SUMMARY</div>
-                            <div class="skin3p">PERSONAL DETAILS</div>
-                            <div class="skin3p">EDUCATION DETAILS</div>
-                            <div class="skin3p">EXPERIENCE DETAILS</div>
-                            <div class="skin3p">SKILLS</div>
-                            <div class="skin3p">ABOUT</div>
-                            <div class="skin3p">HOBBIES</div>
+                    <div class="skin5b2">
+                        <div class="skin5bl">
+                            <div class="skin5p">PROFESSIONAL SUMMARY</div>
+                            <div class="skin5p">PERSONAL DETAILS</div>
+                            <div class="skin5p">EDUCATION DETAILS</div>
+                            <div class="skin5p">EXPERIENCE DETAILS</div>
+                            <div class="skin5p">SKILLS</div>
+                            <div class="skin5p">ABOUT</div>
+                            <div class="skin5p">HOBBIES</div>
 
                         </div>
-                        <div class="skin3br">
-                            <div class="skin3pd1">Successful sales professional with 10+ years experience in large-scale food
+                        <div class="skin5br">
+                            <div class="skin5pd1">Successful sales professional with 10+ years experience in large-scale food
                                 and
                                 retail environments.
                                 Implement cost control measures to ensure operations remain within company targets. Maximize
                                 bottom-line performance through PL, merchandising, staff management, loss control and inventory
                                 management.</div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
                                 <div class="dp1">
                                     <ul>
                                         <li><span>EMAIL : </span>yogeshdavel005@gmail.com</li>
@@ -102,7 +102,7 @@ class Skin3 extends Component {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
                                 <ul>
                                     <li><span>SCHOOL : </span>kendriya vidhalaya</li>
                                     <li><span>LOCATION : </span>Vikas puri</li>
@@ -116,7 +116,7 @@ class Skin3 extends Component {
                                     <li><span>STREAM : </span>8.0</li>
                                 </ul>
                             </div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
                                 <ul>
                                     <li><span>COMPANY : </span>flipkart</li>
                                     <li><span>JOB TITLE : </span>web developer</li>
@@ -128,7 +128,7 @@ class Skin3 extends Component {
                                     <li><span>CITY : </span>Uttar pradesh</li>
                                 </ul>
                             </div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
                                 <ul>
                                     <li>flipkart</li>
                                     <li>web developer</li>
@@ -140,7 +140,7 @@ class Skin3 extends Component {
                                     <li>junior</li>
                                 </ul>
                             </div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
 
                                 <ul>
                                     <li>Flipkart</li>
@@ -148,7 +148,7 @@ class Skin3 extends Component {
                                     <li>Junior</li>
                                 </ul>
                             </div>
-                            <div class="skin3pd1">
+                            <div class="skin5pd1">
                                 <ul>
                                     <li>Flipkart</li>
                                     <li>Web developer</li>
@@ -164,4 +164,4 @@ class Skin3 extends Component {
     }
 }
 
-export default Skin3;
+export default Skin5;

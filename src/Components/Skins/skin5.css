@@ -2,28 +2,28 @@
     margin: 0x;
     box-sizing: 0px;
   }
-  .skin3-cont {
+  .skin5-cont {
     width: 21cm;
     height: 29.7cm;border: 
     1px solid;
   }
-  .skin3-incon {
+  .skin5-incon {
     height: 100%;
     width: 98%;
     padding: 1% 0% 0% 2%;
   }
-  .skin3b1 {
+  .skin5b1 {
     display: flex;
   
     height: 7%;
   }
-  .hbox1 {
+  .skin5hbox1 {
     width: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    background: #449cff;
+    background: #FFD107;
     font-size: 40px;
     height: 80%;
     border-radius: 3%;
@@ -51,30 +51,31 @@
   
     padding: 0% 3% 0% 3%;
   }
-  .skin3b2 {
+  .skin5b2 {
     display: flex;
     height: 93%;
     padding: 2%;
   }
-  .skin3bl {
+  .skin5bl {
     height: 98%;
     width: 30%;
     border-right: 1.5px solid #c9bfbf;
   }
-  .skin3p {
+  .skin5p {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #449CFF;
+    color: #554D42;
     height: 14%;
     font-weight: bold;
   }
-  .skin3br {
+  .skin5br {
     height: 100%;
     width: 70%;
     padding: 1%;
   }
-  .skin3pd1 {
+  .skin5pd1 {
+    border-bottom: 1px solid;
     width: 100%;
     align-items: center;
     display: flex;
@@ -82,10 +83,11 @@
     height: 14%;
     /* background: rebeccapurple; */
   }
-  .skin3pd1 ul li {
+  .skin5pd1 ul li {
     margin-bottom: 6%;
   }
-
+  .skin5pd1 ul {
+  }
   .cl-ul {
     margin-left: 10%;
   }

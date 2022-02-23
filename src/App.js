@@ -18,7 +18,6 @@ import Profile from "./Components/Profile/Profile";
 import SignUp from "./Components/SignUp/Signup";
 import Contact from "./Components/Contact/Contact";
 import Education from "./Components/Education/Education";
-// import Finalize from "./Components/Finalize/Finalize";
 import MyResume from "./Components/MyResumes/MyResume";
 import Skills from "./Components/Skills/Skills";
 import Experience from "./Components/Experience/Experience";
@@ -62,7 +61,6 @@ login = (id, pw) => {
         this.setState({
           isAuth: true,
         });
-        // localStorage.setItem("isAuth", true);
       })
   };
   componentDidMount() {
@@ -72,7 +70,6 @@ login = (id, pw) => {
       let resumeDetails =null;
       // check if logged in ??
       if (user) {
-        console.log("inside iff")
         // get selected resumeId
         let doc = await firebaseApp
           .firestore()
@@ -105,7 +102,7 @@ login = (id, pw) => {
             localStorage.setItem("user" , JSON.stringify(userId));
             // localStorage.getItem("selectedResumeId" , JSON.stringify(selectedResumeId));
           }
-          let selectedResumeIdFromLC = JSON.parse(localStorage.getItem("selectedResumeId"))
+          let selectedResumeIdFromLC = localStorage.getItem("selectedResumeId");
         this.setState({
           isAuth: user ? true : false,
           user: user ? user.uid : null,
