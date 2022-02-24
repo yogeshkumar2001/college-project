@@ -24,7 +24,8 @@ class Final extends React.Component {
       skillsArr: [],
       achievementArr:[],
       hobbiesArr : [],
-      skinId:""
+      skinId:"",
+      skinPath:""
   },
   skinId:""
   }
@@ -52,6 +53,7 @@ class Final extends React.Component {
     let lcabout = JSON.parse(window.localStorage.getItem("about"));
     let achievementArr = lcabout.achievement.split(",");
     let hobbiesArr = lcabout.hobbies.split(",");
+    let skinPath = JSON.parse(window.localStorage.getItem("skinPath"));
     let oldfinalDetails = this.state.finalDetails;
     console.log(oldfinalDetails)
     this.setState({
@@ -65,7 +67,8 @@ class Final extends React.Component {
         skillsArr: skillsArr,
         achievementArr: achievementArr,
         hobbiesArr: hobbiesArr,
-        skinId : lcSkinId
+        skinId : lcSkinId,
+        skinPath : skinPath
       },
     });   
   }
@@ -77,7 +80,7 @@ class Final extends React.Component {
       finalDetails : this.state.finalDetails
     });
     }
-    
+    localStorage.removeItem("selectedResumeId");
   }
   render() {
     console.log("isnide final");

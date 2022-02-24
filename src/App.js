@@ -121,6 +121,7 @@ login = (id, pw) => {
           <Navbar isAuth={this.state.isAuth}/>
           <Switch>
             <Route path="/" exact ><LandingPage isAuth={this.state.isAuth}></LandingPage></Route>
+            <Route path="/myresume" exact ><MyResume isAuth={this.state.isAuth}></MyResume></Route>
             <Route path="/templates" exact ><Templates isAuth={this.state.isAuth} uid={this.state.user} setResumeId={this.setResumeId}></Templates></Route>
             <Route path="/contact" exact ><Contact isAuth={this.state.isAuth} uid={this.state.user} selectedResumeId={this.state.selectedResumeId}></Contact></Route>
             <Route path="/edu" exact ><Education isAuth={this.state.isAuth} uid={this.state.user} selectedResumeId={this.state.selectedResumeId}></Education></Route>
