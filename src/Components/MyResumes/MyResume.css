@@ -27,3 +27,14 @@
     width: 70%;
     text-align: center;
 }
+.loader {
+  /* margin-left: 35%; */
+  margin-top: 13%;
+  height: 66%;
+  width: 32%;
+
+  }
+  .loader img{
+    height: 100%;
+    width: 100%;
+  }

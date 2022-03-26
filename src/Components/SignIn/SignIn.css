@@ -1,0 +1,85 @@
+
+.signin-page {
+  height: 100vh;
+  width: 99vw;
+  /* background: cadetblue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin-container {
+  height: 80%;
+  width: 50%;
+}
+.signin-inner {
+  height: 100%;
+  width: 100%;
+  /* background: pink; */
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin-box {
+  background: linear-gradient(to right, #21d397 0%, #7450fe 100%);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin-box-inputs {
+  height: 80%;
+
+  width: 80%;
+
+  display: flex;
+
+  flex-direction: column;
+}
+.input-1 {
+  margin-bottom: 1;
+  /* background: wheat; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+  height: 25%;
+  font-size: 20px;
+}
+.input-1 label {
+  height: 50%;
+
+  font-size: small;
+}
+.input-1 input {
+  height: 50%;
+  outline: none;
+  font-size: 15px;
+}
+
+.login-btn {
+  border: 1px solid #3e94e4;
+
+  width: 99;
+
+  height: 12%;
+
+  border-radius: 1rem;
+
+  margin-top: 3%;
+
+  font-size: 13px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  background-color: white;
+}
+.login-btn:hover {
+  background-color: #3e94e4;
+  color: white;
+  font-size: bold;
+  cursor: pointer;
+}

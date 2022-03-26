@@ -1,0 +1,11 @@
+.about-us-container{
+    background: red;
+    height: 300vh;
+}
+.about-bg{
+height: 15%;
+}
+.about-bg img{
+height: 100%;
+width: 100%;
+}

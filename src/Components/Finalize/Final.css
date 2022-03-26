@@ -65,3 +65,93 @@ schoolName: "" */
 
 /* achievement: ""
 hobbies: "" */
+
+/* /// */
+
+.user-form-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .user-form {
+    /* border: 1px solid red; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 50%;
+    height: 90%;
+    margin: 2% 20% 0% 25%;
+  }
+  .user-form-details {
+    height: 100%;
+    width: 100%;
+  }
+  .form-floating {
+    width: 45%;
+    margin-left: 4%;
+  }
+  .form-floating input {
+    border: 0px solid transparent;
+    border-bottom: 0.1rem solid #cec8c8;
+    border-radius: 0px;
+  }
+  .mb-3 label {
+  }
+  .form-control:focus {
+    border-color: #b7d7bb;
+  }
+  .deatils {
+    display: flex;
+  }
+  .address {
+    width: 94%;
+  }
+  .headings {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+  }
+  
+  .far {
+    margin-top: 5%;
+    margin-bottom: 2%;
+  
+    font-size: 300%;
+    color: yellowgreen;
+  }
+  .order-confirmation {
+    margin-top: 3%;
+  }
+  
+  .order-deatils {
+    text-align: center;
+    margin-top: 1%;
+    font-size: larger;
+    background-color: rgb(235, 248, 243);
+  }
+  .order-info {
+    font-size: medium;
+  }
+  .msgs p {
+  
+    text-align: center;
+    line-height: 170%;
+  }
+  .msgs p:nth-child(3) {
+    text-decoration-line: underline;
+  }
+  .wb-btn{
+    border: 1px solid;
+    height: 2rem;
+    width: 20%;
+    margin: 0% 40%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+.confirm-img{
+    display: flex;
+    justify-content: center;
+}
+.confirm-img img{
+width: 50%;
+}  

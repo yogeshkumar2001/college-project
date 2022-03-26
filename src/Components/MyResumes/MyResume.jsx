@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import firebaseApp from "../../firebase/firebaseConfig";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import "./MyResume.css";
 
 class MyResume extends Component {
@@ -73,7 +71,9 @@ class MyResume extends Component {
             })}
           </React.Fragment>
         ) : (
-          <h1>Sit Tight , Loading Templates !!!</h1>
+          <div className="loader">
+                <img src="./images/logg.gif" alt="" />
+            </div>
         )}
       </div>
     );

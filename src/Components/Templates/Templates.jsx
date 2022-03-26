@@ -17,59 +17,67 @@ class Templates extends Component {
       { id: "skin7", path: "./images/skin7.svg" },
       { id: "skin8", path: "./images/skin8.svg" },
     ],
-    isAuth :null,
+    isAuth: null,
   };
 
   handleChooseTemplate = async (e) => {
     let skinId = e.target.id;
-    localStorage.setItem("skinPath" ,JSON.stringify(e.target.attributes[2].nodeValue) );
-    localStorage.setItem("skinId" ,JSON.stringify(skinId) );
+    localStorage.setItem("skinPath", JSON.stringify(e.target.attributes[2].nodeValue));
+    localStorage.setItem("skinId", JSON.stringify(skinId));
     // get skinID
     let selectResumeId;
-     selectResumeId = localStorage.getItem("selectedResumeId");
-     console.log(selectResumeId);
-     let resumeId;
-    if(!selectResumeId){
-      let addObj = await firebaseApp.firestore().collection("resumes").add( { skinId : skinId , ...initialState  }  );
+    selectResumeId = localStorage.getItem("selectedResumeId");
+    console.log(selectResumeId);
+    let resumeId;
+    if (!selectResumeId) {
+      let addObj = await firebaseApp.firestore().collection("resumes").add({ skinId: skinId, ...initialState });
       resumeId = addObj.id;
       await firebaseApp.firestore().collection("users").doc(this.props.uid).update({
         Resumes: firebase.firestore.FieldValue.arrayUnion(resumeId)
       })
-      console.log("resume id "+resumeId);
-      localStorage.setItem("selectedResumeId" ,resumeId);
+      console.log("resume id " + resumeId);
+      localStorage.setItem("selectedResumeId", resumeId);
     }
   };
-  componentDidMount(){
+  componentDidMount() {
     let userAuth = JSON.parse(localStorage.getItem("isAuth"));
-    if(userAuth){
+    if (userAuth) {
       this.setState({
-        isAuth : true
+        isAuth: true
       })
     }
   }
 
   render() {
     return (
-      <div className="templates">
-        {this.state.skins.map((skin) => {
-          return (
-            <div key={skin.id} className="template">
-              <div className="template-image">
-                <img src={skin.path} alt="" />
+      <div className="templates-container" onLoad={this.props.IsTAPage}>
+        <div className="templates-welcome">
+          <div className="temp-wel-cont">
+            <h1>Our Templates</h1>
+          </div>
+        </div>
+        <div className="templates">
+
+          {this.state.skins.map((skin) => {
+            return (
+              <div key={skin.id} className="template">
+                <div className="template-image">
+                  <img src={skin.path} alt="" />
+                </div>
+                <Link to="/contact">
+                  <div
+                    className="choose-template"
+                    id={skin.id}
+                    path={skin.path}
+                    onClick={(e) => this.handleChooseTemplate(e)}
+                  >
+                    Choose Template
+                  </div>
+                </Link>
               </div>
-              <Link to="/contact">
-              <div
-                className="choose-template"
-                id={skin.id}
-                path={skin.path}
-                onClick={(e) => this.handleChooseTemplate(e)}
-              >
-                Choose Template
-              </div>
-              </Link>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
   }
